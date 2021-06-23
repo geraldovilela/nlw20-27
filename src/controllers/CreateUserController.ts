@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import "express-async-errors"
 import { CreateUserService } from "../services/CreateUserService";
 
-class CreateUsersController {
+class CreateUserController {
 
   async handle(request: Request, response: Response) {
     const { name, email, admin } = request.body;
@@ -14,4 +14,4 @@ class CreateUsersController {
     return response.json(user);
   }
 }
-export { CreateUsersController };
+export { CreateUserController };
