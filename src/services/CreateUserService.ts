@@ -11,7 +11,7 @@ interface IUserRequest {
 
 class CreateUserService {
 
-  async execute({email, name, admin, password}:IUserRequest): Promise<User> {
+  async execute({email, name, admin=false, password}:IUserRequest): Promise<User> {
     const usersRepository = getCustomRepository(UsersRepositories);
 
     if(!email) {
